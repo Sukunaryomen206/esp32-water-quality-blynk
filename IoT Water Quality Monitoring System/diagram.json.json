@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Anonymous",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot_tds", "top": -140, "left": -130, "attrs": { "label": "TDS Sensor Module" } },
+    { "type": "wokwi-potentiometer", "id": "pot_ec", "top": -140, "left": 120, "attrs": { "label": "EC Sensor Module" } }
+  ],
+  "connections": [
+    [ "esp:GND.1", "pot_tds:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "pot_tds:VCC", "red", [ "v0" ] ],
+    [ "esp:34", "pot_tds:SIG", "blue", [ "v0" ] ],
+    
+    [ "esp:GND.2", "pot_ec:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "pot_ec:VCC", "red", [ "v0" ] ],
+    [ "esp:35", "pot_ec:SIG", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
